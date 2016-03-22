@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+dependencies {
+    compile(project(':app03-domain')) { transitive = false }
+
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+
+//    compile("org.springframework.boot:spring-boot-starter-web")
+}

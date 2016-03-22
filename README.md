@@ -1,2 +1,1 @@
-# PruebaJ
-PruebaJ
+# core
