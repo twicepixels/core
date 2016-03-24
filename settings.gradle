@@ -1,6 +1,6 @@
 rootProject.name = 'twice-pixels-core'
 
-include 'app00-web-app'
+//include 'app00-web-app'
 include 'app01-api'
 include 'app02-services'
 include 'app03-domain'
