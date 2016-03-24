@@ -16,3 +16,6 @@ hs_err_pid*
 *.iml
 ## Directory-based project format:
 .idea/
+## File-based project format:
+*.ipr
+*.iws
