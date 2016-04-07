@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'spring-boot'
+
 dependencies {
-    
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    //Dependencias con otros módulos para compilar
+    compile(project(':app03-domain')) { transitive = false }
 }

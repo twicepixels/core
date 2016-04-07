@@ -2,6 +2,11 @@ apply plugin: 'java'
 apply plugin: 'spring-boot'
 
 dependencies {
-    compile(project(':app03-domain')) { transitive = false }
     compile("org.springframework.boot:spring-boot-starter-data-rest")
+    //Dependencias con otros módulos para compilar
+    compile(project(':app03-domain')) { transitive = false }
+
+    //Dependencias en tiempo de corrida
+    runtime(project(':app02-services')) { transitive = false }
+    runtime(project(':app04-repository')) { transitive = false }
 }
