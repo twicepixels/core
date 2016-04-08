@@ -1,6 +1,3 @@
-group 'twicepixels'
-version '1.0-SNAPSHOT'
-
 apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'spring-boot'
