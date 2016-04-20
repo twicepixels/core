@@ -1,7 +1,7 @@
 package twice.domain.service;
 
-import twice.domain.TwiceUser;
+import twice.domain.model.User;
 
 public interface UserService {
-    TwiceUser add(String name);
+    User add(String name);
 }

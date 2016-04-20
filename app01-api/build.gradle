@@ -4,6 +4,11 @@ apply plugin: 'spring-boot'
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.security.oauth:spring-security-oauth2")
+
+
+
     //Dependencias con otros módulos para compilar
     compile(project(':app03-domain')) { transitive = false }
 
