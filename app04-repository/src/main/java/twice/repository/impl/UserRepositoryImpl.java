@@ -1,28 +1,20 @@
 package twice.repository.impl;
 
 import org.springframework.stereotype.Component;
-import twice.domain.model.Authority;
 import twice.domain.model.User;
 import twice.domain.repository.UserRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @Component
 public class UserRepositoryImpl implements UserRepository {
 
     private List<User> list = new ArrayList<>();
-    private List<Authority> authorities = new ArrayList<>();
+    private Set<String> authorities = new HashSet<>();
 
     public UserRepositoryImpl() {
-        authorities.add(new Authority() {{
-            setName("ROLE_USER");
-        }});
-        authorities.add(new Authority() {{
-            setName("ROLE_ADMIN");
-        }});
+        authorities.add("ROLE_USER");
+        authorities.add("ROLE_ADMIN");
 
         list.add(new User() {{
             setId(5);

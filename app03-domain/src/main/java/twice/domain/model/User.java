@@ -2,7 +2,7 @@ package twice.domain.model;
 
 import twice.domain.EntityBase;
 
-import java.util.List;
+import java.util.Set;
 
 public class User extends EntityBase {
 
@@ -10,7 +10,7 @@ public class User extends EntityBase {
     private String name;
     private String password;
     private Boolean activated;
-    private List<Authority> authorities;
+    private Set<String> authorities;
 
     public int getId() {
         return id;
@@ -44,11 +44,11 @@ public class User extends EntityBase {
         this.activated = activated;
     }
 
-    public List<Authority> getAuthorities() {
+    public Set<String> getAuthorities() {
         return authorities;
     }
 
-    public void setAuthorities(List<Authority> authorities) {
+    public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
     }
 }

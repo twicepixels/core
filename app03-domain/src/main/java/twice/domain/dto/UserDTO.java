@@ -5,6 +5,8 @@ package twice.domain.dto;
 
 //import org.hibernate.validator.constraints.Email;
 
+import twice.domain.model.User;
+
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -16,28 +18,28 @@ public class UserDTO {
     public static final int PASSWORD_MIN_LENGTH = 4;
     public static final int PASSWORD_MAX_LENGTH = 100;
 
-//    @Pattern(regexp = "^[a-z0-9]*$")
+    //    @Pattern(regexp = "^[a-z0-9]*$")
 //    @NotNull
 //    @Size(min = 1, max = 50)
     private String login;
 
-//    @NotNull
+    //    @NotNull
 //    @Size(min = PASSWORD_MIN_LENGTH, max = PASSWORD_MAX_LENGTH)
     private String password;
 
-//    @Size(max = 50)
+    //    @Size(max = 50)
     private String firstName;
 
-//    @Size(max = 50)
+    //    @Size(max = 50)
     private String lastName;
 
-//    @Email
+    //    @Email
 //    @Size(min = 5, max = 100)
     private String email;
 
     private boolean activated = false;
 
-//    @Size(min = 2, max = 5)
+    //    @Size(min = 2, max = 5)
     private String langKey;
 
     private Set<String> authorities;
@@ -45,12 +47,12 @@ public class UserDTO {
 //    public UserDTO() {
 //    }
 
-//    public UserDTO(User user) {
-//        this(user.getLogin(), null, user.getFirstName(), user.getLastName(),
-//            user.getEmail(), user.getActivated(), user.getLangKey(),
-//            user.getAuthorities().stream().map(Authority::getName)
-//                .collect(Collectors.toSet()));
-//    }
+    public UserDTO(User user) {
+        this(user.getName(), null, null, null, null,
+                user.getActivated(), null,
+                user.getAuthorities().stream().map(x -> x)
+                        .collect(Collectors.toSet()));
+    }
 
     public UserDTO(String login, String password, String firstName, String lastName,
                    String email, boolean activated, String langKey, Set<String> authorities) {
@@ -100,14 +102,14 @@ public class UserDTO {
     @Override
     public String toString() {
         return "UserDTO{" +
-            "login='" + login + '\'' +
-            ", password='" + password + '\'' +
-            ", firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
-            ", email='" + email + '\'' +
-            ", activated=" + activated +
-            ", langKey='" + langKey + '\'' +
-            ", authorities=" + authorities +
-            "}";
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", activated=" + activated +
+                ", langKey='" + langKey + '\'' +
+                ", authorities=" + authorities +
+                "}";
     }
 }

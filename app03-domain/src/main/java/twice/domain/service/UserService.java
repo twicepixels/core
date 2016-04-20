@@ -4,4 +4,5 @@ import twice.domain.model.User;
 
 public interface UserService {
     User add(String name);
+    User findByLogin(String login);
 }
