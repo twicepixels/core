@@ -5,4 +5,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-rest")
     //Dependencias con otros módulos para compilar
     compile(project(':app03-domain')) { transitive = false }
+    compile(project(':Utils')) { transitive = false }
+    compile "com.amazonaws:aws-java-sdk:1.10.69"
 }
