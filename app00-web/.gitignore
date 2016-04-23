@@ -1,0 +1,8 @@
+# bower
+**/bower/**/
+**/bower_components/**/
+
+
+**/WEB-INF/**
+**/scripts0/**
+**/scripts1/**

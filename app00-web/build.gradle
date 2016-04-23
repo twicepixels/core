@@ -3,7 +3,19 @@ apply plugin: 'java'
 apply plugin: 'spring-boot'
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-security")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.2.RELEASE")
+    compile("org.springframework.security.oauth:spring-security-oauth2:2.0.9.RELEASE")
+//    compile("org.springframework:spring-tx")
+//    compile("javax.inject:javax.inject:1")
+//    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+//    compile("org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE")
+
+
+//    compile(project(':app03-domain')) { transitive = false }
+//    compile("org.webjars:bootstrap:3.3.6")
+//    compile("org.webjars:angularjs:1.5.3")
+//    compile("org.webjars:jquery:1.12.3")
+//    compile("org.webjars:angular-ui-bootstrap:1.2.5")
 }

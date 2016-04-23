@@ -1,0 +1,9 @@
+{
+  "home": {
+    "title": "Bienvenido, Twicepixels!",
+    "subtitle": "Esta es su página de inicio",
+    "logged": {
+      "message": "Usted está autenticado con el usuario \"{{username}}\"."
+    }
+  }
+}

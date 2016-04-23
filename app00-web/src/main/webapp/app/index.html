@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twicepixels</title>
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" type="image/png" href="content/images/brand01.png"/>
+    <!-- build:css content/css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css content/css/main.css -->
+    <link rel="stylesheet" href="content/css/core.css">
+    <link rel="stylesheet" href="content/css/main.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="twicepixelsApp">
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+        </p>
+    <![endif]-->
+
+    <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak></div>
+    <div ui-view="navbar" ng-cloak></div>
+
+    <div class="body-content">
+        <div class="container">
+            <div class="" ui-view="content"></div>
+        </div>
+        <!--<div class="footer" ng-cloak>-->
+            <!--<p translate="footer">This is your footer</p>-->
+        <!--</div>-->
+    </div>
+
+    <!-- build:js app/bower.js  -->
+    <!-- bower:js -->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/angular/angular.js"></script>
+    <script src="bower/angular-cookies/angular-cookies.js"></script>
+    <script src="bower/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower/angular-cache-buster/angular-cache-buster.js"></script>
+    <script src="bower/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower/angular-resource/angular-resource.js"></script>
+    <script src="bower/ngstorage/ngStorage.js"></script>
+    <!--bower component translation-->
+    <script src="bower/messageformat/messageformat.js"></script>
+    <script src="bower/angular-translate/angular-translate.js"></script>
+    <script src="bower/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="bower/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js app/app.js  -->
+    <!-- inject:js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.state.js"></script>
+    <script src="app/app.constants.js"></script>
+
+    <script src="app/shared/templates/error/error.state.js"></script>
+    <!--module template navbar-->
+    <script src="app/shared/templates/navbar/navbar.controller.js"></script>
+    <script src="app/shared/templates/navbar/active-menu.directive.js"></script>
+    <script src="app/shared/templates/navbar/active-link.directive.js"></script>
+    <!--module template login-->
+    <script src="app/shared/templates/login/login.service.js"></script>
+    <script src="app/shared/templates/login/login.controller.js"></script>
+    <!--module component configuration-->
+    <script src="app/shared/configuration/http.config.js"></script>
+    <script src="app/shared/configuration/localstorage.config.js"></script>
+    <script src="app/shared/configuration/translation.config.js"></script>
+    <script src="app/shared/configuration/translation-storage.provider.js"></script>
+    <!--<script src="app/blocks/config/compile.config.js"></script>-->
+    <!--module component interceptos-->
+    <script src="app/shared/interceptor/auth.interceptor.js"></script>
+    <script src="app/shared/interceptor/error.interceptor.js"></script>
+    <!--module component handlers-->
+    <script src="app/shared/handlers/state.handler.js"></script>
+    <script src="app/shared/handlers/translation.handler.js"></script>
+    <!--module component utilities-->
+    <script src="app/shared/utilities/base64.service.js"></script>
+    <!--module component language-->
+    <script src="app/shared/components/language/language.service.js"></script>
+    <script src="app/shared/components/language/language.filter.js"></script>
+    <script src="app/shared/components/language/language.controller.js"></script>
+    <script src="app/shared/components/language/language.constants.js"></script>
+
+    <!--module auth, account, password service-->
+    <script src="app/services/authorization/auth.service.js"></script>
+    <script src="app/services/authorization/auth.provider.js"></script>
+    <script src="app/services/authorization/account.service.js"></script>
+    <script src="app/services/authorization/principal.service.js"></script>
+    <!--module home controller-->
+    <script src="app/home/home.state.js"></script>
+    <script src="app/home/home.controller.js"></script>
+
+    <!--module PRUEBA EJEMPLO-PAG-SEGURA-->
+    <!--module PRUEBA EJEMPLO-PAG-SEGURA-->
+    <script src="app/EJEMPLO-PAG-SEGURA/state.js"></script>
+    <script src="app/EJEMPLO-PAG-SEGURA/controller.js"></script>
+    <!--module PRUEBA EJEMPLO-PAG-SEGURA-->
+    <!--module PRUEBA EJEMPLO-PAG-SEGURA-->
+
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+</html>
