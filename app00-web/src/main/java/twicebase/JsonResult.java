@@ -20,10 +20,7 @@ public class JsonResult {
         MediaType jsonMimeType = MediaType.APPLICATION_JSON;
         try {
             jsonConverter.write(model, jsonMimeType, new ServletServerHttpResponse(response));
-        } catch (HttpMessageNotWritableException e) {
-            e.printStackTrace();
-        }
-        catch ( IOException e) {
+        } catch (HttpMessageNotWritableException | IOException e) {
             e.printStackTrace();
         }
         return null;

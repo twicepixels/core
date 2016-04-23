@@ -4,8 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class TwiceWebApp {
+
+//    private static final Logger log = LoggerFactory.getLogger(TwiceWebApp.class);
+
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(TwiceWebApp.class, args);
     }
 }
