@@ -28,7 +28,7 @@ public class ResourcesConfigurer extends ResourceServerConfigurerAdapter {
         // @formatter:off
         http.authorizeRequests()
             .requestMatchers(CorsUtils::isCorsRequest)
-            .permitAll()
+            .authenticated()
             .anyRequest()
             .authenticated();
         // @formatter:on

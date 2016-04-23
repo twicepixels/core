@@ -49,7 +49,7 @@ public class UserDTO {
 
     public UserDTO(User user) {
         this(user.getName(), null, null, null, null,
-                user.getActivated(), null,
+                user.getActivated(), "es",
                 user.getAuthorities().stream().map(x -> x)
                         .collect(Collectors.toSet()));
     }
